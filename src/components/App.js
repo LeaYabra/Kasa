@@ -1,4 +1,6 @@
+import React from 'react';
 import logo from '../logo.svg';
+import Emoji from './Emoji/Emoji.jsx'
 import '../App.css';
 
 function App() {
@@ -8,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        Edit {test} <code>bonjour lea💕 src/App.js</code> and save to reload.
+        Edit {test} <code>bonjour lea<Emoji emoji="💕" description='coeur' /> src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
