@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+.AppLogo {
+  height: 10vmin;
+  width: 30vmin;
+  position: 'absolute';
+ 
+}
+
+.AppHeader {
+  background-color: white;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  padding-top: 50px;
+  padding-left: 60px;
+  justify-content: space-between;
+}
+
+.AppMenu{
+ 
+  align-items: right;
+  justify-content: right;
+  color: #FF6060;
+  margin-right: 50px;
+  text-decoration: none;
+}
+.AppMenu:focus{
+  text-decoration-color: #FF6060;
+  text-decoration: underline; 
+}
+
+/*@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}*/

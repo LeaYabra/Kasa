@@ -1,0 +1,44 @@
+.Banner{
+    border-radius: 20px;
+    margin: 40px;
+    background-image:  linear-gradient(rgba(54, 53, 53, 0.4),rgba(54, 53, 53, 0.4)),url('../../images/banner.png'); 
+    background-size: cover; 
+    background-position: center center; 
+    height: 200px; 
+}
+
+.Banner p{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    top: 35%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+}
+.Contain{
+    background-color: black;
+    border-radius: 20px;
+    margin: 40px;
+    flex-direction: column;
+    display: flex;
+    
+}
+.Card {
+    padding: 40px;
+  }
+  
+.CardImage {
+    border-radius: 20px;
+    width: 55vmin;
+    height: 50vmin;
+}
+  
+.CardTitle {
+   position: absolute;
+   display: flex;
+   bottom: 0;
+   padding-top: 10px;
+}
+  
