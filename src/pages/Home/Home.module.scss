@@ -5,8 +5,8 @@
     background-size: cover; 
     background-position: center center; 
     height: 200px; 
+    position: relative;
 }
-
 .Banner p{
     position: absolute;
     color: rgb(255, 255, 255);
@@ -18,27 +18,38 @@
     font-size: 2em;
 }
 .Contain{
-    background-color: black;
+    background-color: #F6F6F6;
     border-radius: 20px;
     margin: 40px;
     flex-direction: column;
+    display: flex;  
+    padding: 20px 20px 20px 20px;
+}
+.CardList{
     display: flex;
-    
-}
-.Card {
-    padding: 40px;
-  }
-  
-.CardImage {
-    border-radius: 20px;
-    width: 55vmin;
-    height: 50vmin;
+    flex-direction: row; 
+    flex-wrap: wrap;    
 }
   
-.CardTitle {
-   position: absolute;
-   display: flex;
-   bottom: 0;
-   padding-top: 10px;
+@media screen and (max-width: 768px) {
+    .Banner{
+        border-radius: 10px;
+        margin: 20px;
+        height: 110px; 
+    }
+    .Banner p{
+        padding: 0px 0px 0px 20px;
+        top: 35%;
+        left: 50%;
+        transform: translate(-100%, -50%);
+        font-size: 1em;
+        text-align: left;
+        word-wrap: break-word; 
+    }
+    .Contain{
+        background: none;
+        margin: 0px;
+        padding: 0px 0px 0px 0px;
+    }
 }
-  
+

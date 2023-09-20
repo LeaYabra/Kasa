@@ -1,17 +1,24 @@
 .Error{
     color: #FF6060;
     text-align: center;
+    padding-bottom: 80px;
+    padding-top: 60px;
 }
 .Error404{
     font-size: 10em;
     margin: 0;
 }
 .ErrorText{
-    margin-top: 20px;
-    margin-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 80px;
     font-size: 1.5em;
 }
 .ErrorLink{
     color: #FF6060;
-    padding: 60px;
+}
+@media screen and (max-width: 768px) {
+
+    .Error404{
+        font-size: 8em;
+    }
 }

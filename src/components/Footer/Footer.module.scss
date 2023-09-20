@@ -4,9 +4,9 @@
    align-items: center;
    color: white;
    left: 0;
-   bottom: 0;
    width: 100%;
-   position: fixed;
+   margin-top: 40px;
+   position: absolute;
 }
 .FooterLogo{
    height: 5vmin;
@@ -16,4 +16,16 @@
 .FooterText{
     padding-bottom: 20px;
     margin: 0;
+}
+@media screen and (max-width: 768px) {
+   .FooterLogo{
+      height: 10vmin;
+      width: 40vmin;
+      padding-top: 80px;
+   }
+   .FooterText{
+      padding-bottom: 60px;
+      width: 40%;
+      padding-left: 30%;
+  }
 }

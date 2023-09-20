@@ -1,0 +1,35 @@
+.Card{
+    display: flex;
+    flex-direction: column;
+    margin: 45px;
+    width: 26%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.CardCover{
+    border-radius: 10px;
+    height: 300px; 
+    width: 100%;
+    filter: brightness(0.8);
+}
+.CardTitle {
+    bottom: 0;
+    padding-left: 10px;
+    width: 40%;
+    position: absolute;
+    color: white;
+    font-size: large;
+}
+@media screen and (max-width: 768px) {
+    .Card{
+        margin: 20px;
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .Card{
+        margin: 35px;
+        width: 40%;
+    }
+}
