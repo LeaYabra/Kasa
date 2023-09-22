@@ -24,6 +24,7 @@ button{
     transform: rotate(180deg);
     margin-left: auto; 
     transition: transform 0.3s ease;
+    cursor: pointer; 
 }
 .CollapseText{
     display: flex;

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'; 
 import styles from './Home.module.scss';
 import Card from '../../components/Card';
+
 function Home() {
   
-  const [logement, setLogement] = useState([]); 
+  const [card, setCard] = useState([]); 
 
   useEffect(() => {
     // Fonction pour charger les données JSON depuis le fichier
@@ -11,7 +12,7 @@ function Home() {
       try {
         const response = await fetch('/data/logements.json'); 
         const data = await response.json();
-        setLogement(data); // Mettre à jour l'état avec les données JSON
+        setCard(data); // Mettre à jour l'état avec les données JSON
       } catch (error) {
         console.error('Erreur lors du chargement des données JSON :', error);
       }
@@ -27,12 +28,12 @@ function Home() {
     </header>
       <div className={styles.Contain}>
         <div className={styles.CardList}>
-          {logement.map((logement) => (
+          {card.map((card) => (
             <Card
-            key={logement.id} 
-            title={logement.title}
-            cover={logement.cover}
-            id={logement.id} 
+            key={card.id} 
+            title={card.title}
+            cover={card.cover}
+            id={card.id} 
             />
           ))}
         </div>
