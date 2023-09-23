@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Slideshow from '../../components/Slideshow';
 import { useParams } from 'react-router-dom'; 
+import styles from './Logement.module.scss';
+import Collapse from '../../components/Collapse'; 
 
 function Logement() {
   const { id } = useParams(); 
@@ -28,16 +30,36 @@ function Logement() {
 
   return (
     <div>
-      <Slideshow pictures={pictures} />
-       {accommodation ? (
-        <div>
-          <h2>{accommodation.title}</h2>
-          <p>{accommodation.location}</p>
+    {accommodation && (
+      <>
+        <Slideshow pictures={pictures} />
+        <div className={styles.Accommodation}>
+          <h1 className={styles.AccommodationTitle}>{accommodation.title}</h1>
+          <p className={styles.AccommodationText}>{accommodation.location}</p>
+          <p>
+            {accommodation.tags.map((tag, index) => (
+              <span key={index} className={styles.AccommodationTags}>
+                {tag}
+                {index < accommodation.tags.length - 1 && ' '}
+              </span>
+            ))}
+          </p>
         </div>
-      ) : (
-        <p>Hébergement non trouvé</p>
-      )}
-    </div>
+          <div className={styles.AccommodationCollapse}>
+            <div className={styles.Collapse}> 
+              <Collapse title= 'Description' text={accommodation.description}/>
+              <Collapse title='Equipements' text={
+                <ul>
+                  {accommodation.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                  ))}
+                 </ul>
+              }/>
+            </div>
+          </div>
+      </>
+    )}
+  </div>
   );
 }
 

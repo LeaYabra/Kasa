@@ -1,0 +1,40 @@
+.Accommodation{
+    padding-left: 50px;
+}
+.AccommodationTitle{
+    color:#FF6060;
+    font-weight: 500;
+    line-height: 0.2;
+}
+.AccommodationText{
+    color:#FF6060;
+    font-size: x-large;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+.AccommodationTags {
+    background-color: #FF6060;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    border-radius: 20px;
+    margin-right: 20px; 
+    font-size: medium;
+}
+.AccommodationCollapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+ }
+.Collapse {
+    padding-left: 0px;
+    margin: none;
+    flex: 1; 
+    align-items: none;
+    max-width: 60%;
+    margin-right: 20px; 
+} 
+ul {
+    list-style-type: none;
+    padding: 0%;
+}
