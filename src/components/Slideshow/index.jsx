@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Slideshow.module.scss';
 import fleche from '../../images/fleche.png';
 
-function Slideshow({ pictures, title, location, tags }) {
+function Slideshow({ pictures, title, location, tags,host,rating}) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -49,7 +49,8 @@ function Slideshow({ pictures, title, location, tags }) {
       <h2>{title}</h2>
       <p>{location}</p>
       <p>{tags}</p>
-
+      <p>{host}</p>
+      <p>{rating}</p>
     </div>
   );
 }

@@ -26,4 +26,16 @@
   right: 2%;
   transform: translateY(-50%) rotate(90deg); 
 }
-
+@media screen and (max-width: 768px) {
+  .Slideshow {
+    padding: 30px 20px 0px 20px;
+  }
+  
+  .IconLeft {
+    width: 50px;
+  }
+    
+  .IconRight {
+    width: 50px;
+  }
+}
