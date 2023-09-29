@@ -16,8 +16,10 @@
 }
 
 .AccommodationCollapse {
-    width: 60%;
-    flex-direction: row;  
+    width: 100%;
+    display: flex;
+    background-color: red;
+
 }
 
 ul {
