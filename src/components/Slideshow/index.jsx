@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Slideshow.module.scss';
-import fleche from '../../images/fleche.png';
+import rightArrow from '../../images/arrow-right.svg'
+import leftArrow from '../../images/arrow-left.svg'
 
-function Slideshow({ pictures, title, location, tags,host,rating}) {
+function Slideshow({ pictures}) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -24,7 +25,7 @@ function Slideshow({ pictures, title, location, tags,host,rating}) {
     <div className={styles.Slideshow}>
       {!hideArrows && (
         <img
-          src={fleche}
+          src={leftArrow}
           alt="Previous"
           className={styles.IconLeft}
           onClick={prevImage}
@@ -39,18 +40,15 @@ function Slideshow({ pictures, title, location, tags,host,rating}) {
 
       {!hideArrows && (
         <img
-          src={fleche}
+          src={rightArrow}
           alt="Next"
           className={styles.IconRight}
           onClick={nextImage}
         />
       )}
+      <p>{currentImageIndex + 1} / {pictures.length}</p>
 
-      <h2>{title}</h2>
-      <p>{location}</p>
-      <p>{tags}</p>
-      <p>{host}</p>
-      <p>{rating}</p>
+     
     </div>
   );
 }

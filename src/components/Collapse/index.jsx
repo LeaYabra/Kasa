@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styles from  './Collapse.module.scss';
 import PropTypes from 'prop-types';
-import fleche from '../../images/fleche.png';
+
+import arrowTop from '../../images/arrow-top.svg'
 
 function Collapse({ title ,text}) {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,12 +17,12 @@ function Collapse({ title ,text}) {
       {isOpen ? (
           <>
             {title} 
-          <img src={fleche} alt='fleche' className={isOpen ? styles.Rotate: ''} />
+          <img src={arrowTop} alt='fleche' className={isOpen ? styles.Rotate: ''} />
           </>
         ) : (
           <>
             {title} 
-         <img src={fleche} alt='fleche'/>
+         <img src={arrowTop} alt='fleche'/>
           </>
         )}
         
