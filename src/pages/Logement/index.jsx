@@ -1,9 +1,10 @@
 import React, { useEffect, useState} from 'react';
 import Slideshow from '../../components/Slideshow';
-import { useParams, useNavigate } from 'react-router-dom'; // Importez useNavigate
+import { useParams, useNavigate } from 'react-router-dom';
 import styles from './Logement.module.scss';
 import Collapse from '../../components/Collapse'; 
 import Rating from '../../components/RatingStars'; 
+//import PropTypes from 'prop-types';
 
 function Logement() {
   const { id } = useParams(); 
@@ -59,12 +60,9 @@ function Logement() {
                   </span>
                   ))}
                 </p>
-                <Rating className={styles.AccommodationRating} rating={parseInt(accommodation.rating, 10)} />
-          
-              
+                <Rating className={styles.AccommodationRating} rating={parseInt(accommodation.rating, 10)} />    
         </div>
           <div className={styles.AccommodationCollapse}>
-           
               <Collapse className={styles.Collapse} title= 'Description' text={accommodation.description}/>
               <Collapse title='Equipements' text={
                 <ul>
@@ -79,5 +77,4 @@ function Logement() {
   </div>
   );
 }
-
 export default Logement;

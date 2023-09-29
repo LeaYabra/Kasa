@@ -1,22 +1,22 @@
 .Rating{
-   display: flex;
-   justify-content: end;
-   padding-right: 50px;
-  
-}
-.Rating span {
-    font-size: 30px; 
-    margin-right: 8px; 
-}
-@media screen and (max-width: 768px) {
-    .Rating{
-        display: flex;
-        justify-content: start;
-        padding-right: 40px;
-       
-     }
-     .Rating span {
-         font-size: 20px; 
-         margin-right: 10px; 
-     }
-}
+    display: flex;
+    justify-content: end;
+    padding-right: 50px;
+   
+ }
+ .Rating span {
+     font-size: 30px; 
+     margin-right: 8px; 
+ }
+ @media screen and (max-width: 768px) {
+     .Rating{
+         display: flex;
+         justify-content: start;
+         padding-right: 40px;
+        
+      }
+      .Rating span {
+          font-size: 20px; 
+          margin-right: 10px; 
+      }
+ }
