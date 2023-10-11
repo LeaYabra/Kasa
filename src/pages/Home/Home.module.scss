@@ -26,9 +26,11 @@
     padding: 20px 20px 20px 20px;
 }
 .CardList{
-    display: flex;
+    display: grid;
     flex-direction: row; 
-    flex-wrap: wrap;    
+    flex-wrap: wrap;  
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;  
 }
   
 @media screen and (max-width: 768px) {
@@ -51,5 +53,11 @@
         margin: 0px;
         padding: 0px 0px 0px 0px;
     }
+    .CardList{
+        display: flex; 
+        gap: 0px; 
+    }
 }
+
+
 

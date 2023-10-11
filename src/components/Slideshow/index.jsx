@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import styles from './Slideshow.module.scss';
 import rightArrow from '../../images/arrow-right.svg'
 import leftArrow from '../../images/arrow-left.svg'
+import PropTypes from 'prop-types';
 
-function Slideshow({ pictures}) {
+function Slideshow({pictures}) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -53,5 +54,8 @@ function Slideshow({ pictures}) {
       </div>
   );
 }
+Slideshow.propTypes = {
+  pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Slideshow;

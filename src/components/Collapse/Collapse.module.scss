@@ -1,5 +1,5 @@
 button{
-    width: 78%;
+    width: 100%;
     height: 100%;
     background-color:  #FF6060;
     border: none;
@@ -11,14 +11,10 @@ button{
     display: flex;
     justify-content: space-between;
 }
-
 .Collapse{
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
     margin-top: 30px;
-    width: 100%;;
 }
 .Rotate{
     transform: rotate(180deg);
@@ -26,30 +22,35 @@ button{
     transition: transform 0.3s ease;
     cursor: pointer; 
 }
-.CollapseText{
+.CollapseText {
     display: flex;
-    align-items: center; 
-    background-color: #f5f3f3;  
-    padding: 5px 20px 5px 20px;
+    align-items: center;
+    padding: 5px 20px;
     border-radius: 0px 0px 5px 5px;
-    margin-left: 90px;
-    margin-right: 90px;
-    width: 75%;
-    color: #FF6060;
-    font-size: large;
+    color: white;
     line-height: 1.5;
-    margin-bottom: 30px;
-    z-index: -1;
+    margin-bottom: 10px;
+    flex: 1;
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease-in-out;
+
+}
+.CollapseOpen {
+    background-color: #f5f3f3;
+    max-height: 500px; 
+    color: #FF6060;
 }
 
 @media screen and (max-width: 768px) {
     button{
-        width: 90%;
         padding: 10px 10px 10px 10px;
     }
-    .CollapseText{
-        width: 79%;
+    .CollapseText {
+        margin-bottom: 0px;
+        padding: 0px 20px;
     }
+  
 }
   
 

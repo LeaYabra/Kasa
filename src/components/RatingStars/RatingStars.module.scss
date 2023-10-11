@@ -9,14 +9,14 @@
      margin-right: 8px; 
  }
  @media screen and (max-width: 768px) {
-     .Rating{
-         display: flex;
-         justify-content: start;
-         padding-right: 40px;
-        
-      }
-      .Rating span {
-          font-size: 20px; 
-          margin-right: 10px; 
-      }
+     .Rating {
+        display: flex;
+        justify-content: start;
+        padding-right: 0px;
+    }
+      .Rating img{
+        width: 25px; 
+        margin-right: 5px; 
+    }
+  
  }

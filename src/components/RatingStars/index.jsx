@@ -2,12 +2,10 @@ import React from 'react';
 import starActive from '../../images/star-active.svg';
 import starInactive from '../../images/star-inactive.svg';
 import styles from './RatingStars.module.scss';
-
+import PropTypes from 'prop-types';
 
 function RatingStars({ rating }) {
   const maxStars = 5; 
- 
-
   const stars = [];
 
   // Générer des étoiles avec une clé unique
@@ -18,8 +16,11 @@ function RatingStars({ rating }) {
       stars.push(<img key={i} src={starInactive} alt="inactive star"/>);
     }
   }
-
   return (<div className={styles.Rating}>{stars}</div>);
 }
 
-  export default RatingStars;
+RatingStars.propTypes = {
+  rating: PropTypes.number.isRequired,
+};
+
+export default RatingStars;

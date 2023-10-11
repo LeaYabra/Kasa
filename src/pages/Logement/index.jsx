@@ -4,14 +4,13 @@ import { useParams, useNavigate } from 'react-router-dom';
 import styles from './Logement.module.scss';
 import Collapse from '../../components/Collapse'; 
 import Rating from '../../components/RatingStars'; 
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-function Logement() {
-  const { id } = useParams(); 
+function Logement({ title, location, host, tag }) {
+  const { id } = useParams();
   const [accommodation, setAccommodation] = useState(null);
   const [pictures, setPictures] = useState([]);
-  const navigate = useNavigate(); 
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,37 +43,52 @@ function Logement() {
       <>
         <Slideshow pictures={pictures} />
         <div className={styles.Accommodation}>
-           <div>
+          <div>
             <h1 className={styles.AccommodationTitle}>{accommodation.title}</h1>
             <p className={styles.AccommodationText}>{accommodation.location}</p>
+            <div className={styles.AccommodationTags}>
+              {accommodation.tags.map((tag, index) => (
+              <span key={index} className={styles.AccommodationTag}>
+                {tag}
+                {index < accommodation.tags.length - 1 && ' '}
+              </span>
+              ))}
             </div>
-              <div className={styles.AccommodationProfile}>
-              <p className={styles.AccommodationName}>{accommodation.host.name}</p>
-              <img className={styles.AccommodationPicture} src={accommodation.host.picture} alt="Profile" />
-            </div>
-                <p>
-                  {accommodation.tags.map((tag, index) => (
-                  <span key={index} className={styles.AccommodationTags}>
-                  {tag}
-                  {index < accommodation.tags.length - 1 && ' '}
-                  </span>
-                  ))}
-                </p>
-                <Rating className={styles.AccommodationRating} rating={parseInt(accommodation.rating, 10)} />    
-        </div>
-          <div className={styles.AccommodationCollapse}>
-              <Collapse className={styles.Collapse} title= 'Description' text={accommodation.description}/>
-              <Collapse title='Equipements' text={
-                <ul>
-                  {accommodation.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                  ))}
-                 </ul>
-              }/>
           </div>
+          <div className={styles.AccommodationProfileRating}>
+            <div className={styles.AccommodationProfile}>
+              <p className={styles.AccommodationName}>{accommodation.host.name}</p>
+              <img className={styles.AccommodationPicture} src={accommodation.host.picture} alt="Profile" /> 
+            </div> 
+            <Rating className={styles.AccommodationRating} rating={parseInt(accommodation.rating, 10)} />       
+          </div>    
+        </div>
+        <div className={styles.AccommodationCollapse}>
+          <div className={styles.Collapse}>
+            <Collapse title= 'Description' text={accommodation.description}/>
+          </div>
+          <div className={styles.Collapse}>
+            <Collapse title='Equipements' text={ 
+              accommodation.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+              ))}
+            />
+          </div>
+        </div>
       </>
     )}
   </div>
   );
 }
+
+Logement.propTypes = {
+  title: PropTypes.string,
+  location: PropTypes.string,
+  host: PropTypes.shape({
+    name: PropTypes.string,
+    picture: PropTypes.string,
+  }),
+  tag: PropTypes.arrayOf(PropTypes.string),
+};
+
 export default Logement;

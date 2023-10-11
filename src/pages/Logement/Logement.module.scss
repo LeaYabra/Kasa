@@ -7,79 +7,114 @@
 .AccommodationTitle{
     color:#FF6060;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 0.5;
 }
 .AccommodationText{
     color:#FF6060;
     font-size: x-large;
     font-weight: 500;
 }
-
-.AccommodationCollapse {
-   display: flex;
-   padding: 0;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0%;
+.AccommodationProfileRating{
+    display: flex;
+    flex-direction: column;
 }
 .AccommodationProfile {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; /* Aligner les éléments à droite */
-    align-items: center; /* Aligner verticalement au centre */
+    justify-content: flex-end; 
+    align-items: center; 
     padding-right: 50px;
-  }
-  
-.AccommodationName{
-    width: 5%;
+}
+.AccommodationRating{
+    align-items: right;
+    justify-content: right;
+   
+}
+.AccommodationName {
+    width: 90px;
     text-align: right;
     color: #FF6060;
-    margin-right: 80px; 
+    margin-right: 30px;
     font-weight: 500;
     font-size: x-large;
-}
-  
+   }
 .AccommodationPicture {
     border-radius: 50%;
     width: 15%;
 }
-
-.AccommodationTags {
+.AccommodationTags{    
+    display: flex;
+    width: 100%;
+}
+.AccommodationTag {
     background-color: #FF6060;
     color: white;
-    padding: 10px 40px 10px 40px;
-    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
     margin-right: 20px; 
     font-size: medium;
 }
-
-.AccommodationRating{
-width: 30px;
+.AccommodationCollapse {
+    display: flex;
+}
+.Collapse{
+    width: 100%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+li {
+    list-style-type: none;
 }
 
 @media screen and (max-width: 768px) {
     .Accommodation{
-        display: grid;
-        grid-template-columns: 1fr ; 
-        align-items: left; 
         padding-left: 20px;
+        display: block;
     }
     .AccommodationTitle{
-        width: 100%;
-        line-height: 1;
-        font-size: xX-large;
+        line-height: 0.5;
+    }
+    .AccommodationText{
+        font-size: large;
+    }
+    .AccommodationProfileRating{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-top: 5%;
+    }
+    .AccommodationProfile { 
+        padding-right: 20px;
     }
     .AccommodationName{
-   
-    margin-right: 20px; 
-   
-}
-
-
-.AccommodationCollapse {
-    width: 100%;
-    flex-direction: column;  
-}
+        font-size: large;
+        width: 50px;
+        margin-right: 30px;
+        font-size: large;
+    }
+    .AccommodationPicture {
+        width: 25%;
+    }
+    .AccommodationRating{
+        align-items: left;
+        justify-content: center;
+       
+    }
+    .AccommodationTags{    
+        display: flex;
+        width: 100%;
+    }
+    .AccommodationTag {
+        padding: 10px 25px 10px 25px;
+        border-radius: 10px;
+        margin-right: 20px; 
+        font-size: small;
+        text-align: center;  
+    }
+    .AccommodationCollapse {
+        flex-direction: column;  
+    }
+    .Collapse{
+        width: 95%; 
+    }
 }
