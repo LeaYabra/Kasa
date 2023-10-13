@@ -6,7 +6,7 @@ import Collapse from '../../components/Collapse';
 import Rating from '../../components/RatingStars'; 
 import PropTypes from 'prop-types';
 
-function Logement({ title, location, host, tag }) {
+function Logement() {
   const { id } = useParams();
   const [accommodation, setAccommodation] = useState(null);
   const [pictures, setPictures] = useState([]);

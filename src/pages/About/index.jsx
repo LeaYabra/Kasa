@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './About.module.scss';
 import about from '../../images/about.png';
 import Collapse from '../../components/Collapse'; 
+
 function About() {
   return (
     <div>

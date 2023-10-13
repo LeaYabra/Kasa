@@ -54,6 +54,7 @@ function Slideshow({pictures}) {
       </div>
   );
 }
+
 Slideshow.propTypes = {
   pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

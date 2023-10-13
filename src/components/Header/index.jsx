@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import styles from './Header.module.scss';
 
-
 function Header() {
   return (
     <div className={styles.App}>

@@ -7,7 +7,7 @@
 .AccommodationTitle{
     color:#FF6060;
     font-weight: 500;
-    line-height: 0.5;
+    line-height: 1;
 }
 .AccommodationText{
     color:#FF6060;
@@ -44,6 +44,7 @@
 }
 .AccommodationTags{    
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 .AccommodationTag {
@@ -53,6 +54,7 @@
     border-radius: 15px;
     margin-right: 20px; 
     font-size: medium;
+    margin-bottom: 2%;
 }
 .AccommodationCollapse {
     display: flex;
@@ -70,9 +72,6 @@ li {
     .Accommodation{
         padding-left: 20px;
         display: block;
-    }
-    .AccommodationTitle{
-        line-height: 0.5;
     }
     .AccommodationText{
         font-size: large;
@@ -100,16 +99,9 @@ li {
         justify-content: center;
        
     }
-    .AccommodationTags{    
-        display: flex;
-        width: 100%;
-    }
     .AccommodationTag {
-        padding: 10px 25px 10px 25px;
-        border-radius: 10px;
-        margin-right: 20px; 
-        font-size: small;
-        text-align: center;  
+        padding: 5px 10px 5px 10px;
+        border-radius: 15px;
     }
     .AccommodationCollapse {
         flex-direction: column;  
